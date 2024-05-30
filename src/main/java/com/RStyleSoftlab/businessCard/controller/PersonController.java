@@ -33,7 +33,7 @@ public class PersonController {
     }
 
     @GetMapping("/city/{city}")
-    public ResponseEntity<Page<ResponsePersonDto>> findBySex(@PathVariable("city") String city,
+    public ResponseEntity<Page<ResponsePersonDto>> findByCity(@PathVariable("city") String city,
                                                              @RequestParam(defaultValue = "name") String sortCriteria,
                                                              @RequestParam(defaultValue = "0") int page,
                                                              @RequestParam(defaultValue = "3") int size) {
