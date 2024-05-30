@@ -1,5 +1,6 @@
 package com.rStyleSoftlab.businessCard.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rStyleSoftlab.businessCard.entity.enams.Sex;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,6 +22,7 @@ public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "person_id")
+    @JsonIgnore
     private UUID personId;
     @Column(name = "name",nullable = false)
     private String name;

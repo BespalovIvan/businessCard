@@ -1,5 +1,6 @@
 package com.rStyleSoftlab.businessCard.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rStyleSoftlab.businessCard.entity.enams.LevelOfEducation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,6 +21,7 @@ public class Education {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "education_id")
+    @JsonIgnore
     private UUID educationId;
     @Enumerated(EnumType.STRING)
     @Column(name = "level_of_education",nullable = false)
@@ -32,6 +34,7 @@ public class Education {
     private LocalDate startDateOfStudies;
     @Column(name = "end_date_of_studies",nullable = false)
     private LocalDate endDateOfStudies;
+    @JsonIgnore
     @Column(name = "person_id",nullable = false)
     private UUID personId;
 }

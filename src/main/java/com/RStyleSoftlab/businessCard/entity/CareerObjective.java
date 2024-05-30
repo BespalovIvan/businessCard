@@ -1,5 +1,6 @@
 package com.rStyleSoftlab.businessCard.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rStyleSoftlab.businessCard.entity.enams.Employment;
 import com.rStyleSoftlab.businessCard.entity.enams.Schedule;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,7 @@ public class CareerObjective {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "career_objective_id")
+    @JsonIgnore
     private UUID careerObjectiveId;
     @Column(name = "job_title",nullable = false)
     private String jobTitle;
@@ -32,6 +34,7 @@ public class CareerObjective {
     private Schedule schedule;
     @Column(name = "salary",nullable = false)
     private BigDecimal salary;
+    @JsonIgnore
     @Column(name = "person_id",nullable = false)
     private UUID personId;
 

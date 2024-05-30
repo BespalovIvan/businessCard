@@ -1,9 +1,11 @@
 package com.rStyleSoftlab.businessCard.service;
 
-import com.rStyleSoftlab.businessCard.entity.Person;
-
-import java.util.List;
+import com.rStyleSoftlab.businessCard.dto.ResponsePersonDto;
+import org.springframework.data.domain.Page;
 
 public interface PersonService {
-    List<Person> findAll();
+    Page<ResponsePersonDto> findAll(String sortCriteria,int page,int size);
+    Page<ResponsePersonDto> findByName(String name, String sortCriteria, int page,int size);
+    Page<ResponsePersonDto> findByCity(String city, String sortCriteria, int page,int size);
+
 }

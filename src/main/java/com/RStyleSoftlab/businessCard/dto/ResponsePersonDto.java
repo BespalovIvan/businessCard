@@ -2,11 +2,14 @@ package com.rStyleSoftlab.businessCard.dto;
 
 import com.rStyleSoftlab.businessCard.entity.*;
 import com.rStyleSoftlab.businessCard.entity.enams.Sex;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ResponsePersonDto {
     private String name;
     private String lastName;

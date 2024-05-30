@@ -1,5 +1,6 @@
 package com.rStyleSoftlab.businessCard.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class Experience {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "experience_id")
+    @JsonIgnore
     private UUID experienceId;
     @Column(name = "name_company",nullable = false)
     private String nameCompany;
@@ -30,6 +32,7 @@ public class Experience {
     private LocalDate dateOfDismissal;
     @Column(name = "responsibilities",nullable = false)
     private String responsibilities;
+    @JsonIgnore
     @Column(name = "person_id",nullable = false)
     private UUID personId;
 }
