@@ -24,8 +24,10 @@ public class CareerObjective {
     private UUID careerObjectiveId;
     @Column(name = "job_title",nullable = false)
     private String jobTitle;
+    @Enumerated(EnumType.STRING)
     @Column(name = "employment",nullable = false)
     private Employment employment;
+    @Enumerated(EnumType.STRING)
     @Column(name = "schedule",nullable = false)
     private Schedule schedule;
     @Column(name = "salary",nullable = false)

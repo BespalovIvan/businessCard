@@ -21,6 +21,7 @@ public class Education {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "education_id")
     private UUID educationId;
+    @Enumerated(EnumType.STRING)
     @Column(name = "level_of_education",nullable = false)
     private LevelOfEducation levelOfEducation;
     @Column(name = "name_of_the_institution",nullable = false)

@@ -19,6 +19,11 @@ databaseChangeLog:
                 constraints:
                   nullable: false
             - column:
+                name: last_name
+                type: varchar(50)
+                constraints:
+                  nullable: false
+            - column:
                 name: age
                 type: integer
                 constraints:
@@ -43,3 +48,15 @@ databaseChangeLog:
                 type: varchar(50)
                 constraints:
                   nullable: false
+- changeSet:
+        id: add-check-constraint-sex
+        author: Bespalov
+        changes:
+          - sql:
+              sql: ALTER TABLE persons ADD CONSTRAINT check_sex CHECK (sex IN ('Male','Female'))
+- changeSet:
+    id: add-check-constraint-email
+    author: Bespalov
+    changes:
+      - sql:
+          sql: ALTER TABLE persons ADD CONSTRAINT check_email CHECK (email like'_%@_%.__%')

@@ -24,8 +24,11 @@ public class Person {
     private UUID personId;
     @Column(name = "name",nullable = false)
     private String name;
+    @Column(name = "last_name",nullable = false)
+    private String lastName;
     @Column(name = "age",nullable = false)
     private Integer age;
+    @Enumerated(EnumType.STRING)
     @Column(name = "sex",nullable = false)
     private Sex sex;
     @Column(name = "city",nullable = false)
@@ -33,7 +36,7 @@ public class Person {
     @Column(name = "phone_number",nullable = false)
     private Long phoneNumbers;
     @Column(name = "email",nullable = false)
-    @Email
+    @Email(regexp = "^[\\w-\\.]+@[\\w-]+(\\.[\\w-]+)*\\.[a-z]{2,}$")
     private String email;
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "person_id")

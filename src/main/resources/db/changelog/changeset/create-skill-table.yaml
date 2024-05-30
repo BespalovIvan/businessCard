@@ -32,3 +32,9 @@ databaseChangeLog:
                     foreignKeyName: fk_person_skill
                     referencedTableName: persons
                     referencedColumnNames: person_id
+  - changeSet:
+      id: add-check-constraint-proficiency_level
+      author: Bespalov
+      changes:
+        - sql:
+            sql: ALTER TABLE skills ADD CONSTRAINT check_proficiency_level CHECK (proficiency_level IN ('Low','Medium','High'))

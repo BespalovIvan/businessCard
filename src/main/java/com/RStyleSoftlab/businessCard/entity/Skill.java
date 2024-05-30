@@ -22,6 +22,7 @@ public class Skill {
     private UUID skillId;
     @Column(name = "name",nullable = false)
     private String name;
+    @Enumerated(EnumType.STRING)
     @Column(name = "proficiency_level",nullable = false)
     private ProficiencyLevel proficiencyLevel;
     @Column(name = "person_id",nullable = false)
