@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-interest
+      author: Bespalov
+      changes:
+        - createTable:
+            tableName: interests
+            columns:
+              - column:
+                  name: interest_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

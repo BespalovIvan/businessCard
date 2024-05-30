@@ -1,0 +1,45 @@
+databaseChangeLog:
+- changeSet:
+    id: create-person
+    author: Bespalov
+    changes:
+      - createTable:
+          tableName: persons
+          columns:
+            - column:
+                name: person_id
+                type: UUID
+                autoIncrement: false
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: name
+                type: varchar(50)
+                constraints:
+                  nullable: false
+            - column:
+                name: age
+                type: integer
+                constraints:
+                  nullable: false
+            - column:
+                name: sex
+                type: varchar(20)
+                constraints:
+                  nullable: false
+            - column:
+                name: city
+                type: varchar(50)
+                constraints:
+                  nullable: false
+            - column:
+                name: phone_number
+                type: numeric
+                constraints:
+                  nullable: false
+            - column:
+                name: email
+                type: varchar(50)
+                constraints:
+                  nullable: false

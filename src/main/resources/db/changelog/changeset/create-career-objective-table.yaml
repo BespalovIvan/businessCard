@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-career-objective
+      author: Bespalov
+      changes:
+        - createTable:
+            tableName: career_objectives
+            columns:
+              - column:
+                  name: career_objective_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: job_title
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: employment
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: schedule
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: salary
+                  type: bigint
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: add-check-constraint-employment
+      author: Bespalov
+      changes:
+        - sql:
+            sql: ALTER TABLE career_objectives ADD CONSTRAINT check_employment CHECK (employment IN ('FullEmployment','PartTimeEmployment'))
+  - changeSet:
+      id: add-check-constraint-schedule
+      author: Bespalov
+      changes:
+        - sql:
+            sql: ALTER TABLE career_objectives ADD CONSTRAINT check_schedule CHECK (schedule IN ('FullDay','PartTimeJob'))

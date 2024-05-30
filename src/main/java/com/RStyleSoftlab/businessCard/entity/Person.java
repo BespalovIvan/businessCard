@@ -1,6 +1,6 @@
-package com.RStyleSoftlab.businessCard.entity;
+package com.rStyleSoftlab.businessCard.entity;
 
-import com.RStyleSoftlab.businessCard.dto.Sex;
+import com.rStyleSoftlab.businessCard.entity.enams.Sex;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,11 +24,13 @@ public class Person {
     private UUID personId;
     @Column(name = "name",nullable = false)
     private String name;
+    @Column(name = "age",nullable = false)
+    private Integer age;
     @Column(name = "sex",nullable = false)
     private Sex sex;
     @Column(name = "city",nullable = false)
     private String city;
-    @Column(name = "phone_numbers",nullable = false)
+    @Column(name = "phone_number",nullable = false)
     private Long phoneNumbers;
     @Column(name = "email",nullable = false)
     @Email

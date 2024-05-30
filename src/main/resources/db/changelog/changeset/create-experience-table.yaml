@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-experience
+      author: Bespalov
+      changes:
+        - createTable:
+            tableName: experiences
+            columns:
+              - column:
+                  name: experience_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name_company
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: job_title
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date_of_employment
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date_of_dismissal
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: responsibilities
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

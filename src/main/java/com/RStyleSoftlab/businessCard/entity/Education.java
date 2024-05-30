@@ -1,6 +1,6 @@
-package com.RStyleSoftlab.businessCard.entity;
+package com.rStyleSoftlab.businessCard.entity;
 
-import com.RStyleSoftlab.businessCard.dto.LevelOfEducation;
+import com.rStyleSoftlab.businessCard.entity.enams.LevelOfEducation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

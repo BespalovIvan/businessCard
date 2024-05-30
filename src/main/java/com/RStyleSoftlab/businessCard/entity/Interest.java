@@ -1,4 +1,4 @@
-package com.RStyleSoftlab.businessCard.entity;
+package com.rStyleSoftlab.businessCard.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,7 +1,7 @@
-package com.RStyleSoftlab.businessCard.entity;
+package com.rStyleSoftlab.businessCard.entity;
 
-import com.RStyleSoftlab.businessCard.dto.Employment;
-import com.RStyleSoftlab.businessCard.dto.Schedule;
+import com.rStyleSoftlab.businessCard.entity.enams.Employment;
+import com.rStyleSoftlab.businessCard.entity.enams.Schedule;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,4 +30,5 @@ public class CareerObjective {
     private Schedule schedule;
     @Column(name = "salary",nullable = false)
     private BigDecimal salary;
+
 }

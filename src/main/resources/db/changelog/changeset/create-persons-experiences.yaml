@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-persons-experiences
+      author: Bespalov
+      changes:
+        - createTable:
+            tableName: persons_to_experiences
+            columns:
+              - column:
+                  name: experience_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_experiences
+                    referencedTableName: experiences
+                    referencedColumnNames: experience_id
+              - column:
+                  name: person_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_person_career_objective
+                    referencedTableName: persons
+                    referencedColumnNames: person_id
+  - changeSet:
+      id: add-unique-constraint
+      author: Bespalov
+      changes:
+        - addUniqueConstraint:
+            tableName: persons_to_experiences
+            columnNames: experience_id,person_id
+            constraintName: unique_from_person_experiences

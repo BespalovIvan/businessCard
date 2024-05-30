@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-education
+      author: Bespalov
+      changes:
+        - createTable:
+            tableName: educations
+            columns:
+              - column:
+                  name: education_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: level_of_education
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name_of_the_institution
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: speciality
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: start_date_of_studies
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: end_date_of_studies
+                  type: date
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: add-check-constraint-level_of_education
+      author: Bespalov
+      changes:
+        - sql:
+            sql: ALTER TABLE educations ADD CONSTRAINT check_level_of_education CHECK (level_of_education IN ('SecondaryEducation','SecondaryVocationalEducation','HigherEducation'))

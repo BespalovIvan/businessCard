@@ -1,6 +1,6 @@
-package com.RStyleSoftlab.businessCard.entity;
+package com.rStyleSoftlab.businessCard.entity;
 
-import com.RStyleSoftlab.businessCard.dto.ProficiencyLevel;
+import com.rStyleSoftlab.businessCard.entity.enams.ProficiencyLevel;
 
 import javax.persistence.*;
 import java.util.UUID;

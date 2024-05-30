@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-skill
+      author: Bespalov
+      changes:
+        - createTable:
+            tableName: skills
+            columns:
+              - column:
+                  name: skill_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: proficiency_level
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
