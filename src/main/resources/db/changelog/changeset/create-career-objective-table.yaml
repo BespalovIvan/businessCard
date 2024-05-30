@@ -33,6 +33,15 @@ databaseChangeLog:
                   type: bigint
                   constraints:
                     nullable: false
+              - column:
+                  name: person_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_person_career_objective
+                    referencedTableName: persons
+                    referencedColumnNames: person_id
   - changeSet:
       id: add-check-constraint-employment
       author: Bespalov

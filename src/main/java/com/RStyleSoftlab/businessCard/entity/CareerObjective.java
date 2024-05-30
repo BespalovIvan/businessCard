@@ -30,5 +30,7 @@ public class CareerObjective {
     private Schedule schedule;
     @Column(name = "salary",nullable = false)
     private BigDecimal salary;
+    @Column(name = "person_id",nullable = false)
+    private UUID personId;
 
 }

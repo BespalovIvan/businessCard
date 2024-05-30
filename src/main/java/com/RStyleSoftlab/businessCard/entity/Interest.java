@@ -23,4 +23,6 @@ public class Interest {
     private String name;
     @Column(name = "description",nullable = false)
     private String description;
+    @Column(name = "person_id",nullable = false)
+    private UUID personId;
 }

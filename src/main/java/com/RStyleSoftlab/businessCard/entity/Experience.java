@@ -30,4 +30,6 @@ public class Experience {
     private LocalDate dateOfDismissal;
     @Column(name = "responsibilities",nullable = false)
     private String responsibilities;
+    @Column(name = "person_id",nullable = false)
+    private UUID personId;
 }

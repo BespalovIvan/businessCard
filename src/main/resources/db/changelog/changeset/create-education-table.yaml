@@ -38,6 +38,15 @@ databaseChangeLog:
                   type: date
                   constraints:
                     nullable: false
+              - column:
+                  name: person_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_person_education
+                    referencedTableName: persons
+                    referencedColumnNames: person_id
   - changeSet:
       id: add-check-constraint-level_of_education
       author: Bespalov

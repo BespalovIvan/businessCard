@@ -31,4 +31,6 @@ public class Education {
     private LocalDate startDateOfStudies;
     @Column(name = "end_date_of_studies",nullable = false)
     private LocalDate endDateOfStudies;
+    @Column(name = "person_id",nullable = false)
+    private UUID personId;
 }

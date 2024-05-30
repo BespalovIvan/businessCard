@@ -1,5 +1,7 @@
 databaseChangeLog:
   - include:
+        file: db/changelog/changeset/create-person-table.yaml
+  - include:
       file: db/changelog/changeset/create-career-objective-table.yaml
   - include:
       file: db/changelog/changeset/create-education-table.yaml
@@ -9,15 +11,3 @@ databaseChangeLog:
       file: db/changelog/changeset/create-interest-table.yaml
   - include:
       file: db/changelog/changeset/create-skill-table.yaml
-  - include:
-      file: db/changelog/changeset/create-person-table.yaml
-  - include:
-      file: db/changelog/changeset/create-persons-career-objectives.yaml
-  - include:
-      file: db/changelog/changeset/create-persons-educations.yaml
-  - include:
-      file: db/changelog/changeset/create-persons-experiences.yaml
-  - include:
-      file: db/changelog/changeset/create-persons-interests.yaml
-  - include:
-      file: db/changelog/changeset/create-persons-skills.yaml

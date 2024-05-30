@@ -38,3 +38,12 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
+              - column:
+                  name: person_id
+                  type: UUID
+                  autoIncrement: false
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_person_experience
+                    referencedTableName: persons
+                    referencedColumnNames: person_id
